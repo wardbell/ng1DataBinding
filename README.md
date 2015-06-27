@@ -38,8 +38,8 @@ Written in TypeScript because
     ```
 To compile on-demand, w/o watching try either of
 
-       gulp ts-compile
-       tsc -p src
+        gulp ts-compile
+        tsc -p src
 
 1. In second terminal, launch server (8080) with live reload
 
@@ -48,4 +48,4 @@ To compile on-demand, w/o watching try either of
     ```
 For more on *live-server*, try
 
-       live-server --help
+        live-server --help
