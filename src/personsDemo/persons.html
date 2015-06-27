@@ -1,0 +1,68 @@
+<div ng-controller="PersonsController as vm">
+
+  <h1>Persons Demo</h1>
+  <div class="row"> 
+    <div class="col-sm-2" ng-controller="PersonsController as vm" style="margin-top: 12px">
+  		<div class="peopleList">       
+  			<ul>
+  				<li ng-repeat="person in vm.persons track by person.personId">  
+  				    <label ng-click="vm.select(person)">{{person.fullName}}</label>
+  				</li>			
+  			</ul>
+  		</div>
+  	</div>
+
+	  <div class="clearfix visible-xs-block"></div>
+	
+    <div class="col-sm-10" ng-controller="PersonDetailController as vm">	
+		  <h2>{{vm.person.fullName}}</h2>
+		  <div class="row">
+			<form>
+				<div class="form-group">		  
+					<div class="form-inline">              
+						<label for="fn" class="col-sm-2">First:</label>
+						<input ng-model="vm.person.firstName" type="text" id="fn" class="form-control" placeholder="First name">
+					</div>         
+				</div>        
+           
+ 				<div class="form-group">
+          <div class="form-inline">	 
+  					<label for="ln" class="col-sm-2">Last:</label>                        
+    				<input ng-model="vm.person.lastName" type="text" id="ln" class="form-control" placeholder="Last name">
+          </div>            
+			  </div>
+				        
+  			<div class="form-group">  
+       		<div class="form-inline">        
+     				<label for="bdt" class="col-sm-2" >Birth:</label>		                  
+						<input ng-model="vm.person.birthDate" id="bdt" type="date" class="form-control" datepicker-popupis-open="vm.opened" min-date="'1900-01-01'" max-date="'2015-06-22'"  date-disabled="false" ng-required="true" close-text="Close" />        
+       			&nbsp;<label>Age:</label> {{vm.person.age}}	  
+  				</div>  
+    		</div>
+				  
+      	<div class="form-group" ng-if="vm.person.mom">
+       		<label class="col-sm-2">Mom:</label>			 							
+      		<div class="form-inline">       
+    				<input ng-model="vm.person.mom.firstName" type="text" class="form-control" placeholder="Mom's First name">
+    				<input ng-model="vm.person.mom.lastName" type="text" class="form-control" placeholder="Mom's Last name">
+  					{{vm.person.mom.fullName}}             
+					</div>      
+  			</div>
+
+    		<div class="form-group" ng-if="vm.person.dad">		  
+          <label class="col-sm-2">Dad:</label>               
+ 					<div class="form-inline">                  
+						<input ng-model="vm.person.dad.firstName" type="text" class="form-control" placeholder="Dad's First name">
+						<input ng-model="vm.person.dad.lastName" type="text" class="form-control" placeholder="Dad's Last name">
+            {{vm.person.dad.fullName}}      
+          </div>
+        </div>
+			
+  			<div class="form-group" ng-if="vm.person.friends.length">
+            <label class="col-sm-2">Friends:</label>
+        	  <div>{{vm.person.friendsNames}}</div> 
+        </div>
+      </form>
+		</div>
+	</div>  
+</div>

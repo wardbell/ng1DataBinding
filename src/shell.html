@@ -1,0 +1,11 @@
+<div ng-controller="ShellController as vm" class="container">
+
+  <a href="#" ng-click="vm.show('fullName')">FullName Demo</a> |
+  <a href="#" ng-click="vm.show('persons')">Person Demo</a> |
+  <a href="#" ng-click="vm.show('orders')">Order Demo</a> 
+
+  <section id="content" class="content panel">
+    <div ng-include="vm.demo"></div>
+  </section>
+  
+</div

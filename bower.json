@@ -1,0 +1,24 @@
+{
+  "name": "ng1DataBindingDemo",
+  "description": "Demonstrate Angular v.1.x data binding",
+  "version": "0.0.0",
+  "authors": ["Ward Bell"],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "angular": "~1.4",
+    "angular-sanitize": "~1.4",
+    "bootstrap": "~3.2.0",
+    "font-awesome": "~4.2.0",
+    "moment": "~2.6.0",
+    "angular-animate": "~1.4",
+    "angular-bootstrap": "angular-ui/bootstrap-bower#~0.13.0"
+  }
+}
