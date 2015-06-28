@@ -35,7 +35,10 @@
   			<div class="form-group">  
        		<div class="form-inline">        
      				<label for="bdt" class="col-sm-2" >Birth:</label>		                  
-						<input ng-model="vm.person.birthDate" id="bdt" type="date" class="form-control" datepicker-popupis-open="vm.opened" min-date="'1900-01-01'" max-date="'2015-06-22'"  date-disabled="false" ng-required="true" close-text="Close" />        
+						<input ng-model="vm.person.birthDate" 
+							ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" 
+							id="bdt" type="date" class="form-control" 
+							datepicker-popupis-open="vm.opened" min-date="'1900-01-01'" max-date="'2015-06-22'"  date-disabled="false" ng-required="true" close-text="Close"/>        
        			&nbsp;<label>Age:</label> {{vm.person.age}}	  
   				</div>  
     		</div>

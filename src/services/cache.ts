@@ -74,7 +74,7 @@ module app {
         
         get age(){
              var bdt = this.birthDate;
-            return bdt ? Person.currentYear - bdt.getFullYear() : null;           
+            return bdt ? moment.duration(Date.now() - bdt.valueOf()).years() : null;           
         }
         
         get friendsNames() {
